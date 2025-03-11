@@ -24,9 +24,11 @@ A simple web server built with Hono.js that handles ZPL print requests.
 
 3. Expose via ngrok
 
-  ```
-  ngrok http 4321
-  ```
+
+   ```
+   ngrok http 4321
+   ```
+
 
 ## API Endpoints
 
