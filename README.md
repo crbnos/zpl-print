@@ -2,6 +2,21 @@
 
 A simple web server built with Hono.js that handles ZPL print requests.
 
+```mermaid
+sequenceDiagram
+    participant W as Web App
+    participant N as Ngrok Endpoint
+    participant L as Local Print Server
+    participant P as Network Printer
+    
+    W->>N: Trigger Event
+    N->>L: Forward Request
+    L->>W: Request ZPL Download
+    W-->>L: Send ZPL Data
+    L->>P: Send Print Job
+    P-->>L: Print Confirmation
+```
+
 ## Setup
 
 1. Install dependencies:
@@ -23,7 +38,6 @@ A simple web server built with Hono.js that handles ZPL print requests.
    ```
 
 3. Expose via ngrok
-
 
    ```
    ngrok http 4321
