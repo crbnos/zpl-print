@@ -43,6 +43,8 @@ sequenceDiagram
    ngrok http 4321
    ```
 
+4. Define the printers and work centers in `/src/config.ts`
+
 
 ## API Endpoints
 
